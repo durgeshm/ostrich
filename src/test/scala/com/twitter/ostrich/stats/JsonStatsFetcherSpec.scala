@@ -19,7 +19,7 @@ object JsonStatsFetcherSpec extends Specification {
   if (hasRuby) {
     "json_stats_fetcher.rb" should {
       var service: AdminHttpService = null
-      val script = TempFile.fromResourcePath("/json_stats_fetcher.rb").getAbsolutePath
+      val script = "./src/scripts/json_stats_fetcher.rb"
 
       doBefore {
         exec("chmod", "+x", script)
