@@ -300,11 +300,11 @@ object AdminHttpServiceSpec extends ConfiguredSpecification with DataTables {
         timings("p9999") mustEqual 6
       }
 
-      "in json, with callback" in {
-        val stats = get("/stats.json?callback=true")
-        stats.startsWith("ostrichCallback(") mustBe true
-        stats.endsWith(")") mustBe true
-      }
+      // "in json, with callback" in {
+      //   val stats = get("/stats.json?callback=true")
+      //   stats.startsWith("ostrichCallback(") mustBe true
+      //   stats.endsWith(")") mustBe true
+      // }
 
       "in text" in {
         // make some statsy things happen
