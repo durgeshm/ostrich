@@ -12,7 +12,7 @@ class OstrichProject(info: ProjectInfo) extends StandardLibraryProject(info)
   val localMaven = Resolver.file("Local Maven repository", new java.io.File(Path.userHome+"/.m2/repository"))
   val publishTo = localMaven 
 
-  val utilVersion = "1.12.3"
+  val utilVersion = "1.12.5"
   val util = "com.twitter" %% "util-core" % utilVersion
   val eval = "com.twitter" %% "util-eval" % utilVersion
   val logging = "com.twitter" %% "util-logging" % utilVersion
@@ -20,6 +20,7 @@ class OstrichProject(info: ProjectInfo) extends StandardLibraryProject(info)
 
   // for tests:
   val specs = "org.scala-tools.testing" %% "specs" % "1.6.9" % "test"
+  
   val cglib = "cglib" % "cglib" % "2.1_3" % "test"
   val asm = "asm" % "asm" % "1.5.3" % "test"
   val objenesis = "org.objenesis" % "objenesis" % "1.1" % "test"
